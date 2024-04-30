@@ -135,7 +135,7 @@ GROUP BY Months;
 
 ![image](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/0f3618d1-7eaf-4af6-bffb-497342e1a745)
 
--- **Find the category wise types of pizzas**
+- **Find the category wise types of pizzas**
 
 ```
 SELECT 
@@ -218,24 +218,24 @@ ORDER BY revenue DESC;
 - **Analyse the cumulative revenue generated overtime**
 
 ```
-select
+SELECT
       Order_Date,
-      sum(revenue) over(order by order_date) as Cumulative_Revenue
-   from
+      SUM(revenue) OVER(ORDER BY order_date) AS Cumulative_Revenue
+   FROM
      (
-        select
+        SELECT
              orders.order_date,
-             sum(orders_details.quantity * pizzas. price) as revenue
-        from orders_details
-            join pizzas
-              on
+             SUM(orders_details.quantity * pizzas. price) AS revenue
+        FROM orders_details
+            JOIN pizzas
+              ON
                 orders_details.pizza_id = pizzas.pizza_id
-            join orders
-               on
+            JOIN orders
+               ON
                 orders.order_id = orders_details.order_id
-     group by orders.order_date
-     order by orders.order_date )
-as sales;
+     GROUP BY orders.order_date
+     ORDER BY orders.order_date )
+AS sales;
 ```
 
 **Output:**
@@ -245,26 +245,30 @@ as sales;
 - **Determine the top 3 most ordered pizza types based on revenue for each pizza category**
 
 ```
-select
+SELECT
      Name,
      Revenue,
      Ranking
-   from
-      (select
+   FROM
+      (SELECT
            category,
            name,
            revenue,
-           rank() over(partition by category order by revenue desc) as Ranking
-         from
-             (select
-                   pizza_types.category, pizza_types.name, sum(orders_details.quantity * pizzas.price) as revenue
-         from pizza_types
-            join
-            pizzas on pizza_types.pizza_type_id = pizzas. pizza_type_id
-            join
-            orders_details on orders_details.pizza_id = pizzas.pizza_id
-Group by pizza_types.category, pizza_types.name) as a) as b
-where Ranking <=3;
+           RANK() OVER(PARTITION BY category ORDER BY revenue DESC) AS Ranking
+         FROM
+             (SELECT
+                   pizza_types.category, pizza_types.name, SUM(orders_details.quantity * pizzas.price) AS revenue
+         FROM pizza_types
+            JOIN
+            pizzas
+               ON
+                 pizza_types.pizza_type_id = pizzas. pizza_type_id
+            JOIN
+            orders_details
+               ON
+                  orders_details.pizza_id = pizzas.pizza_id
+GROUP BY pizza_types.category, pizza_types.name) AS a) AS b
+WHERE Ranking <=3;
 ```
 
 **Output:**
@@ -274,17 +278,25 @@ where Ranking <=3;
 - **Find the revenue and total orders by months and their category**
 
 ```
-select *
-from
-(select monthname(orders.order_date) as Months, count(orders.order_id) as total_orders, any_value(pizza_types.category) as Category, round(sum(orders_details.quantity*pizzas.price),2) as Revenue from orders
-join orders_details on
-orders_details.order_id = orders.order_id
-join pizzas on
-pizzas.pizza_id = orders_details.pizza_id
-join pizza_types on
-pizza_types.pizza_type_id=pizzas.pizza_type_id
-Group by Months) as a
-Order by revenue;
+SELECT *
+     FROM
+      (SELECT
+       MONTHNAME(orders.order_date) AS Months,
+       COUNT(orders.order_id) AS total_orders,
+       ANY_VALUE(pizza_types.category) AS Category,
+       ROUND(SUM(orders_details.quantity*pizzas.price),2) AS Revenue
+    FROM orders
+      JOIN orders_details
+        ON
+          orders_details.order_id = orders.order_id
+      JOIN pizzas
+        ON
+          pizzas.pizza_id = orders_details.pizza_id
+      JOIN pizza_types
+      ON
+      pizza_types.pizza_type_id=pizzas.pizza_type_id
+GROUP BY Months) AS a
+ORDER BY revenue;
 ```
 
 **Output:**
