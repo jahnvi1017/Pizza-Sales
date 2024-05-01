@@ -9,7 +9,6 @@ This SQL project analyse the sale of pizzas of 2015 of an anonymous store. In th
    1. Clauses
    2. Joins
    3. Window function
-   4. CTE
    5. Sub Query
    6. Aggregate Functions
 
