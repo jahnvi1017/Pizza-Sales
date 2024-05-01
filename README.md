@@ -13,7 +13,7 @@ This SQL project analyses the sale of pizzas of 2015 of an anonymous store. In t
    - Aggregate Functions
 
 ## Key Analysis
-- The total revenue generated in 2015 is `$817860.05`.
+- The total revenue generated in 2015 is `$8,17,860.05`.
 - The highest priced pizza is `The Greek Pizza` which is of $35.95.
 - The most comomnly sold pizza size is `Large`.
 - The most ordered pizza based on quantity is `The Classic Deluxe Pizza` and the least ordered pizza is `The Brie Carre Pizza`.
@@ -24,7 +24,7 @@ This SQL project analyses the sale of pizzas of 2015 of an anonymous store. In t
 - `The Classic pizza` has contributed the largest percentage of revenue.
 - `Friday` has the most number of sales in the entire week.
 - `July` has the most number of sales in the entire year.
-- The `Chicken` category has highest revenue of `$72557.9` in `July` out of all the months.
+- The `Chicken` category has highest revenue of `$72,557.9` in `July` out of all the months.
 
   # SQL Queries
   
