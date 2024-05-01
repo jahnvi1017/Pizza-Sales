@@ -6,11 +6,11 @@ This SQL project analyse the sale of pizzas of 2015 of an anonymous store. In th
 1. Import data
 2. Data Analysis
 3. Functions used:
-   1. Clauses
-   2. Joins
-   3. Window function
-   5. Sub Query
-   6. Aggregate Functions
+   - Clauses
+   - Joins
+   - Window function
+   - Sub Query
+   - Aggregate Functions
 
 ## Key Analysis
 - The total revenue generated in 2015 is $817860.05.
