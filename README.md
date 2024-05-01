@@ -1,6 +1,6 @@
 # Pizza-Sales
 # Overview
-This SQL project analyses the sale of pizzas of 2015 of an anonymous store. In this project I have used top queries that can be used to upscale production and sales by fetching data from a sql structured database by using MYSQL Workbench. The datasource contains 4 tables- **Orders, Order Details, Pizzas** and **Pizza Types** which shows detailed data of pizza names, pizza category, pizza sizes, order date, order time, quantity, and price.
+This SQL project analyses the sale of pizzas of 2015 of an anonymous store. In this project I have used some top queries that can be used to upscale production and sales by fetching data from a sql structured database by using MYSQL Workbench. The datasource contains 4 tables- **Orders, Order Details, Pizzas** and **Pizza Types** which shows detailed data of pizza names, pizza category, pizza sizes, order date, order time, quantity, and price.
 
 ## Skils Used:
 1. Import data
