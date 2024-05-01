@@ -16,7 +16,7 @@ This SQL project analyse the sale of pizzas of 2015 of an anonymous store. In th
 ## Key Analysis
 - The total revenue generated in 2015 is $817860.05.
 - The highest priced pizza is `The Greek Pizza` which is of $35.95.
-- The most commomnly sold pizza size is `Large`.
+- The most comomnly sold pizza size is `Large`.
 - The most ordered pizza based on quantity is `The Classic Deluxe Pizza` and the least ordered pizza is `The Brie Carre Pizza`.
 - The highest sold pizza category is `Classic` and the least sold is `Chicken`.
 - Peek selling hour of the day is `12PM-1PM`.
