@@ -1,11 +1,11 @@
 # Pizza-Sales
 # Overview
-This SQL project analyse the sale of pizzas of 2015 of an anonymous store. In this project I have used top queries that can be used to upscale production and sales by fetching data from a sql structuerd database by using MYSQL Workbench. The datasource contains 4 tables orders, order details, pizzas and pizza types which shows detailed data of pizza names, pizza category, pizza sizes, order date, order time, quantity, and price.
+This SQL project analyses the sale of pizzas of 2015 of an anonymous store. In this project I have used top queries that can be used to upscale production and sales by fetching data from a sql structured database by using MYSQL Workbench. The datasource contains 4 tables- orders, order details, pizzas and pizza types which shows detailed data of pizza names, pizza category, pizza sizes, order date, order time, quantity, and price.
 
 ## Skils Used:
 1. Import data
 2. Data Analysis
-3. Functions used:
+3. Functions such as:
    - Clauses
    - Joins
    - Window function
@@ -13,7 +13,7 @@ This SQL project analyse the sale of pizzas of 2015 of an anonymous store. In th
    - Aggregate Functions
 
 ## Key Analysis
-- The total revenue generated in 2015 is $817860.05.
+- The total revenue generated in 2015 is `$817860.05`.
 - The highest priced pizza is `The Greek Pizza` which is of $35.95.
 - The most comomnly sold pizza size is `Large`.
 - The most ordered pizza based on quantity is `The Classic Deluxe Pizza` and the least ordered pizza is `The Brie Carre Pizza`.
@@ -44,6 +44,8 @@ FROM
 
 ![Screenshot 2024-04-30 210656](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/1fbbc6d2-7f2b-498c-95c3-a897e00dcdd8)
 
+---
+
 - **Identify the highest priced pizza**
 
 ```
@@ -59,6 +61,8 @@ LIMIT 1;
 **Output:**
 
 ![Screenshot 2024-04-30 210803](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/2b9e7d23-87e1-4689-bdfd-151eb533917f)
+
+---
 
 - **Identify the most common pizza size ordered**
 
@@ -77,6 +81,8 @@ LIMIT 1;
 **Output:**
 
 ![Screenshot 2024-04-30 210854](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/378905e4-2749-4217-8b2d-ecbcaa84a6f9)
+
+---
 
 - **List the top 5 most ordered pizza types along with there quantities**
 
@@ -99,6 +105,8 @@ LIMIT 5;
 
 ![Screenshot 2024-04-30 211040](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/77df0563-fa97-4750-ab6f-f8ff5eacadbd)
 
+---
+
 - **Find the total quantity of each pizza category sold**
 
 ```
@@ -118,6 +126,8 @@ GROUP BY pizza_types.category;
 
 ![Screenshot 2024-04-30 211339](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/f3921877-c7e0-41c6-acea-7a4f203e5078)
 
+---
+
 - **Determine the distribution of orders by hour of the day**
 
 ```
@@ -131,6 +141,8 @@ GROUP BY HOUR(order_time);
 **Output:**
 
 ![Screenshot 2024-04-30 211624](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/4afdc3d7-9db7-4ef4-9687-a01db47f9663)
+
+---
 
 - **Daily trend for total orders**
 
@@ -147,6 +159,7 @@ GROUP BY weekdays;
 
 ![Screenshot 2024-04-30 211802](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/2ab726f4-fd98-4da5-a966-e777ce4c0783)
 
+---
 
 - **Months trend for total orders**
 
@@ -163,6 +176,8 @@ GROUP BY Months;
 
 ![image](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/0f3618d1-7eaf-4af6-bffb-497342e1a745)
 
+---
+
 - **Find the category wise types of pizzas**
 
 ```
@@ -177,6 +192,7 @@ GROUP BY category;
 
 ![image](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/33c995bc-e6a6-4741-9e90-79c7972c2a40)
 
+---
 
 - **Group the orders by date and calculate the average number of pizzas ordered per day**
 
@@ -195,6 +211,8 @@ FROM
 **Output:**
 
 ![Screenshot 2024-04-30 221244](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/5a000c4b-9f63-4781-bf55-1eb4e087387f)
+
+---
 
 - **Determine the top 3 most ordered pizza types based on revenue**
 
@@ -216,6 +234,8 @@ LIMIT 3;
 **Output:**
 
 ![Screenshot 2024-04-30 221510](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/56d4127a-7fe5-4676-8ca8-1255b2e429f0)
+
+---
 
 - **Calculate the percentage contribution of each pizza type to total revenue**
 
@@ -243,6 +263,8 @@ ORDER BY revenue DESC;
 
 ![image](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/ee14ec05-cf3c-4313-a7cf-a21e4138c5cd)
 
+---
+
 - **Analyse the cumulative revenue generated overtime**
 
 ```
@@ -269,6 +291,8 @@ AS sales;
 **Output:**
 
 ![image](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/04f8f81f-a4a5-42fd-a3f4-dd9eb10631ab)
+
+---
 
 - **Determine the top 3 most ordered pizza types based on revenue for each pizza category**
 
@@ -303,6 +327,8 @@ WHERE Ranking <=3;
 
 ![Screenshot 2024-04-30 224940](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/552e0391-d2a9-4c4a-8707-e61dc644b478)
 
+---
+
 - **Find the revenue and total orders by months and their category**
 
 ```
@@ -330,5 +356,4 @@ ORDER BY revenue;
 **Output:**
 
 ![Screenshot 2024-04-30 225121](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/4539a242-3648-4047-99bb-5db4b1403bef)
-
 
