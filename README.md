@@ -27,7 +27,7 @@ This SQL project analyse the sale of pizzas of 2015 of an anonymous store. In th
 - `July` has the most number of sales in the entire year.
 - The `Chicken` category has highest revenue of `$72557.9` in `July` out of all the months.
 
-  # SQL Queries with outputs
+  # SQL Queries
   
 - **Calculate the total revenue generated from pizza sales**
 
