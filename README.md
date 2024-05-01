@@ -100,7 +100,7 @@ LIMIT 5;
 
 ![Screenshot 2024-04-30 211040](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/77df0563-fa97-4750-ab6f-f8ff5eacadbd)
 
-- **Join the necessaery tables to find the total quantity of each pizza category sold**
+- **Find the total quantity of each pizza category sold**
 
 ```
 SELECT 
