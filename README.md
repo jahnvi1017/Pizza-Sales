@@ -18,13 +18,13 @@ This SQL project analyses the sale of pizzas of 2015 of an anonymous store. In t
 - The most comomnly sold pizza size is `Large`.
 - The most ordered pizza based on quantity is `The Classic Deluxe Pizza` and the least ordered pizza is `The Brie Carre Pizza`.
 - The highest sold pizza category is `Classic` and the least sold is `Chicken`.
-- Peek selling hour of the day is `12PM-1PM`.
+- Peak selling hour of the day is `12PM-1PM`.
 - The average number of pizzas ordered per day is `138`.
 - The most orderd pizza type based on revenue is `The Thai Chicken Pizza` and the least one is `The Brie Carre Pizza`.
 - `The Classic pizza` has contributed the largest percentage of revenue.
 - `Friday` has the most number of sales in the entire week.
 - `July` has the most number of sales in the entire year.
-- The `Chicken` category has highest revenue of `$72,557.9` in `July` out of all the months.
+- The `Chicken` category has the highest revenue of `$72,557.9` in `July` out of all the months.
 
   # SQL Queries
   
