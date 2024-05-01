@@ -1,5 +1,34 @@
 # Pizza-Sales
+# Overview
+This SQL projects describes the sales of pizza of 2015 of an anonymous store. In this project I have used top queries that can be used to upscale production and sales by fetching data from a sql structuerd database by using MYSQL Workbench. The datasource contains 4 tables orders, order details, pizzas and pizza types which shows detailed data of pizza names, pizza category, oredr date, time, quantity, price, and pizza sizes.
 
+## Skils Used:
+1. Import data
+2. Data Analysis
+3. Functions used:
+   1. Clauses
+   2. Joins
+   3. Window function
+   4. CTE
+   5. Sub Query
+   6. Aggregate Functions
+
+## Key Analysis
+- The total revenue generated in 2015 is $817860.05.
+- The highest priced pizza is `The Greek Pizza` which is of $35.95.
+- The most commomnly sold pizza size is `Large`.
+- The most ordered pizza based on quantity is `The Classic Deluxe Pizza` and the least ordered pizza is `The Brie Carre Pizza`.
+- The highest sold pizza category is `Classic` and the least sold is `Chicken`.
+- Peek selling hour of the day is `12PM-1PM`.
+- The average number of pizzas ordered per day is `138`.
+- The most orderd pizza type based on revenue is `The Thai Chicken Pizza` and the least one is `The Brie Carre Pizza`.
+- `The Classic pizza` has contributed the largest percentage of revenue.
+- `Friday` has the most number of sales in the entire week.
+- `July` has the most number of sales in the entire year.
+- The `Chicken` category has highest revenue of `$72557.9` in `July` out of all the months.
+
+  # SQL Queries with outputs
+  
 - **Calculate the total revenue generated from pizza sales**
 
 ```
@@ -71,7 +100,7 @@ LIMIT 5;
 
 ![Screenshot 2024-04-30 211040](https://github.com/jahnvi1017/Pizza-Sales/assets/168184461/77df0563-fa97-4750-ab6f-f8ff5eacadbd)
 
-- **Join the necessaery tables to find the total quantity of each pizza category**
+- **Join the necessaery tables to find the total quantity of each pizza category sold**
 
 ```
 SELECT 
